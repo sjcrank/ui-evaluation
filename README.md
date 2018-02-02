@@ -48,6 +48,27 @@ modifiedView.render(null); // error is printed to console
 
 ### CSS Questions
 
+#### 1.
+Given the following structure:
+```
+<div style='border: 1px solid #000'>
+  <span style='width: 30px; background: #ff0000'/>
+  <span style='width: 30px; background: #0000ff'/>
+</div>
+```
+How many different ways can you style the blue span so that it is right-aligned within its parent div?
+
+Which approach would you recommend?
+
+
+#### 2.
+Provide HTML and CSS that shows <input type='radio'/> radio buttons in 3 states: unchecked, checked, and disabled. The radio buttons should have a custom style (not the browser default style), as follows:
+- 14 px diameter outer circle with background #ffffff, border color #aaabac
+- when checked, 6px diameter inner circle with background #1e8bd1
+- when disabled, outer circle has background #f0f0f0
+
+See the "radio-buttons.png" image for an example
+
 ### React Questions
 
 
