@@ -79,40 +79,26 @@ See the "radio-buttons.png" image for an example
 #### 1.
 Given the following React component:
 ```
-const Container = props => {
+const List = props => {
     return (
-        <div className='container' style={{ margin: '12px', border: '1px solid #000' }}>
-            <h1>This is a container</h1>
-        </div>
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>
     );
 };
 ```
 
-Provide a modified version which is able to accept these properties:
+Provide a modified version which is able to accepts these properties:
 ```
-Container.propTypes = {
-    className: PropTypes.string,
-    style: PropTypes.object,
-    content: PropTypes.node
+List.propTypes = {
+    data: PropTypes.arrayOf(PropTypes.string),
+    selectItem: PropTypes.func,
 };
 ```
 
-The modified Container component should incorporate the new properties in this way:
-- outer div has both the "container" class name as well as the props.className if provided
-- outer div combines the props.stsyle object with its own { margin: '12px' } style (props.style overrides if there are duplicate properties)
-- content property is inserted after the h1 inside the outer div
+The modified List component should display each props.data array element as a li within the ul (remove the hardcoded li elements from the above example).
 
-Usage example:
-```
-<Container className='test' style={{ background: '#f0f0f0', margin: '9px' }}>
-  <p>with a message</p>
-</Container>
-```
+The List component should also respond to click events on li elements by calling props.selectItem(), passing in the text content of the clicked list element.
 
-Should render the following HTML in browser:
-```
-<div class='container test' style='border:1px solid #000;background:#f0f0f0;margin:9px;'>
-  <h1>This is a container</h1>
-  <p>with a message</p>
-</div>
-```
