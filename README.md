@@ -26,6 +26,26 @@ convertObject({ a: 'hello', b: 'Everyone', c: 53, d: ' ', e: null });
 // returns [ '53', 'Everyone', 'hello' ]
 ```
 
+#### 2.
+Implement a JavaScript function "makeResilient()" with this functionality:
+- accepts a single parameter "view" which is a plain JavaScript object having various properties, including a function "view.render()" which may take any number of parameters
+- returns an object that has the same properties as "view", except that its "render()" calls "view.render()" inside a try/catch block and writes any caught errors to the console
+
+Usage example:
+```
+let view = {
+  name: 'test view',
+  render: function(options) {
+    console.log('message = ' + options.message);
+  }
+};
+
+let modifiedView = makeResilient(view);
+console.log(modifiedView.name); // test view
+modifiedView.render({ message: 'hello world' }); // hello world
+modifiedView.render(null); // error is printed to console
+```
+
 ### CSS Questions
 
 ### React Questions
