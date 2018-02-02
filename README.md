@@ -46,6 +46,11 @@ modifiedView.render({ message: 'hello world' }); // hello world
 modifiedView.render(null); // error is printed to console
 ```
 
+#### 3.
+Summarize the differences between using Promises and Callbacks for asynchronous code (calling REST APIs is a common asynchronous task). What are some considerations that are relevant in determining which approach is most appropriate for a given situation?
+
+As an example, the SuperAgent library (http://visionmedia.github.io/superagent/#request-basics) provides support for both approaches, .then() for Promises or .end() for Callbacks.
+
 ### CSS Questions
 
 #### 1.
