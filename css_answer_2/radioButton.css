@@ -1,0 +1,64 @@
+body{
+    background-color:white;
+  }
+  /* The container */
+  .radContainer {
+    display:inline-block;
+    position: relative;
+    padding-left: 18px;
+    margin-left:10px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  /* hide the default radio button */
+   input {
+    display:none;
+  }
+  
+  /* custom radio button */
+  .radioButton {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border:1px solid #aaabac;
+      background-color: #fff;
+      border-radius: 8px;
+      height: 14px;
+      width: 14px;
+  }
+  
+  
+  /* hide the inner circle when not checked */
+  .radioButton:after {
+      content: "";
+      position: absolute;
+      display: none;
+  }
+  
+  /* Style the inner circle */
+  .radContainer .radioButton:after {
+       top: 4px;
+      left: 4px;
+      width: 6px;
+      height: 6px;
+      border-radius: 3px;
+  }
+  
+  /* inner circle when checked */
+  .radContainer input:checked ~ .radioButton:after {
+      display: block;
+      background-color: #1e8bd1;
+  }
+  
+  /* inner circle when disabled */
+  .radContainer input:disabled ~ .radioButton  {
+      background-color: #f0f0f0;
+      cursor:default;
+      
+  }
+  /* change the label font for the disabled button*/
+   .radContainer input:disabled ~ .radioButton + label
+  {
+      color:#C8C6C6;
+  }
