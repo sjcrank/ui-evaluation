@@ -113,25 +113,18 @@ As an example, the SuperAgent library (http://visionmedia.github.io/superagent/#
 Answer:
 ```
 1. Callbacks and promises both are used for asynchronous operations in javascript. 
-
 Promises are not callbacks instead it returns a promise object and promises are easy to understand and maintain.
 2. Callbacks becomes more complicated to handle when there are multiple/nested callback. 
-
 Tough to handle errors, when any of the function fails or throws error.
 3. Callbacks are usually passed as a function parameter which is intended to be called after completion of a task. 
 4. Promises in javascript are objects. The two common methods in a promise object are "then" and "error". 
 5. It is most appropriate to use promises when there are multiple asynchronous function calls to be executed. 
 6. Promises gives the ability to write asynchronous code with flat indentation and a single exception channel, 
-
 which makes easier to handle errors if any of the nested callback fails throws error.
 7. **Promises** functionality can also be achieved using **callbacks** but nesting callbacks inside another callback 
-
 makes it difficult to propagate errors from the inner methods. This problem is often referred to as callback hell 
-
 which results in spaghetti code also harder to debug. Promises provides an other method called as "Promise.all" which 
-
 lets you execute multiple promise calls . Promises provide a better way of error handling. Errors can be caught in a 
-
 chained method called Promise.error which can be part of the promise chain. In short a Promise is a syntactic improvement for callbacks.
 ```
 
