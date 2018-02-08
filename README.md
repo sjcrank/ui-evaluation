@@ -57,8 +57,8 @@ As an example, the SuperAgent library (http://visionmedia.github.io/superagent/#
 Given the following structure:
 ```
 <div style='border: 1px solid #000;'>
-  <span style='width: 30px; background: #ff0000;'/>
-  <span style='width: 30px; background: #0000ff;'/>
+  <span style='width: 30px; background: #ff0000; display:inline-block;'>R</span>
+  <span style='width: 30px; background: #0000ff; display:inline-block;'>B</span>
 </div>
 ```
 How many different ways can you style the blue span so that it is right-aligned within its parent div?
