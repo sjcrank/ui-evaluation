@@ -1,0 +1,9 @@
+div {
+  position: relative;
+}
+
+#blueSpan {
+  position: absolute;
+  right:0px;
+  padding-right:30px;
+}
