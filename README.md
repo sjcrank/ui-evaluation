@@ -171,9 +171,11 @@ float:right;
 padding-right: 30px;
 }
 
-Element with **Position:absolute** will break the normal document flow and when regarding normal elements, absolute positioned element is completely ignored
+Element with **Position:absolute** will break the normal document flow and when regarding 
+normal elements, absolute positioned element is completely ignored
 
-Using **Float: right**, element is placed right to the parent div and it does not break the normal document flow. So, in this scenario, it is better to use **floats**.
+Using **Float: right**, element is placed right to the parent div and it does not break 
+the normal document flow. So, in this scenario, it is better to use **floats**.
 
 ```
 
